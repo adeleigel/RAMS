@@ -54,7 +54,7 @@ wgrib2:
 $(EXE): $(ARC) $(MAIN) FORCE
 	@echo ""
 	$(F_COMP) -o $(EXE) $(MAIN_OBJ) $(LOADER_OPTS) $(ARC) \
-        $(PAR_LIBS)
+	$(HDF5_LIBS) $(LIBS) $(PAR_LIBS)
 	rm -f *.o
 	@echo ""
 	@echo Finished building === $(EXE)
